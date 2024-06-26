@@ -1,0 +1,649 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Public Sans', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.cont-img1 {
+    position: absolute;
+    top: -50px;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.first-img {
+    width: 100%;
+    max-width: 1000px;
+    overflow: hidden;
+    margin-left: 760px;
+    margin-top: -170px;
+}
+
+.second-img {
+    position: absolute;
+    top: -40px;
+    right: -120px;
+    width: 700px;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgb(0, 0, 0, 0.1);
+    height: 80px;
+    padding: 0 130px;
+    background-color: white;
+    position: fixed;
+    /* z-index: 4; */
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2d314d;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 20px;
+    padding: 0 20px;
+
+
+}
+
+.navbar ul li {
+    font-size: 18px;
+    position: relative;
+}
+
+.navbar ul li a {
+    color: gray;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li.contact a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background-color: #31d35c;
+    transition: width 0.3s ease;
+    position: absolute;
+    left: 0;
+    bottom: -19px;
+}
+
+.navbar ul li.contact a:hover::after {
+    width: 100%;
+}
+
+.request-btn {
+    background: linear-gradient(to right, rgb(49 208 106), rgb(21 207 210));
+    padding: 13px 30px;
+    color: white;
+    border-radius: 50px;
+    cursor: pointer;
+    border: none;
+    font-size: 19px;
+    transition: background-color 0.3s ease;
+}
+
+.menu-icon,
+.close-icon {
+    font-size: 24px;
+    display: none;
+    cursor: pointer;
+}
+
+.head {
+    padding: 155px 0 0 99px;
+
+}
+
+.head1 h1 {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.head p {
+    opacity: 0.5;
+}
+
+.paras {
+    margin-top: 25px;
+
+}
+
+
+.head2 img {
+    width: 1271px;
+
+
+
+}
+
+.request-btn2 {
+    background: linear-gradient(to right, rgb(49 208 106), rgb(21 207 210));
+    padding: 10px 30px;
+    color: white;
+    border-radius: 50px;
+    cursor: pointer;
+    border: none;
+    font-size: 19px;
+    transition: background-color 0.3s ease;
+    margin-top: 30px;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.nav-links,
+.menu-icon,
+.close-icon {
+    z-index: 4;
+    /* Ensure the navigation elements appear above the overlay */
+}
+
+.features {
+    background-color: rgb(244 245 247);
+    height: 500px;
+    width: 100%;
+    margin-top: 250px;
+}
+
+.feat-head {
+    padding: 80px 0 0 110px;
+}
+
+.feat-head-txt {
+    margin-bottom: 16px;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+}
+
+.feat-head p {
+    opacity: 0.5;
+}
+
+.feauture-cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 70px;
+    margin-right: 160px;
+}
+
+.feauture-card img {
+    margin-bottom: 20px;
+}
+
+.feauture-card h3 {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 15px;
+}
+
+.feauture-card p {
+    opacity: 0.5;
+}
+
+.articles {
+    width: 100%;
+    height: 600px;
+    background-color: white;
+    margin-bottom: 120px;
+}
+
+.articles .text1 {
+    padding: 80px 0 0 110px;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+
+}
+
+.article-cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 80px 0 0 70px;
+    margin-right: 10px;
+}
+
+.articles .article-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 20%;
+    text-align: left;
+}
+
+.names {
+    margin-top: 20px;
+    color: black;
+}
+
+
+.articles .article-card h2 {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.articles .article-card p {
+    opacity: 0.5;
+}
+
+.name-head-text {
+    margin-top: 10px;
+    color: black;
+}
+
+.name-header {
+    color: black;
+    margin-top: 10px;
+    width: 300px;
+    font-size: 13px;
+}
+
+.footer {
+    width: 100%;
+    background-color: rgb(45 49 78);
+    padding: 60px 0;
+
+}
+
+
+.social-icons {
+    margin-left: 30px;
+}
+
+
+footer.footer-logo svg {
+    color: white;
+}
+
+.social-icons .fa-facebook {
+    color: white;
+}
+
+.social-icons .fa-twitter {
+    color: white;
+}
+
+.social-icons .fa-instagram {
+    color: white;
+}
+
+.social-icons .fa-youtube {
+    color: white;
+}
+
+.social-icons .fa-pinterest {
+    color: white;
+}
+
+.footer .container1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.footer .footer-logo {
+    color: white;
+    margin: 30px;
+}
+
+
+.footer .footer-head {
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+    margin-top: -10px;
+
+}
+
+.footer-links a,
+.footer-links2 a {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin: 10px;
+}
+
+.footer-links2 {
+    margin-right: 390px;
+}
+
+.footer .footer-copy {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.footer-copy {
+    color: white;
+}
+
+.footer-copy button {
+    margin-bottom: 30px;
+}
+
+.footer-logo img {
+    background-color: aliceblue;
+
+}
+
+
+
+@media(max-width: 1200px) {
+    header {
+        padding: 0 100px;
+    }
+}
+
+@media(max-width: 1050px) {
+    header {
+        padding: 0 80px;
+    }
+}
+
+@media(max-width: 900px) {
+    header {
+        padding: 0 60px;
+    }
+}
+
+@media(max-width: 768px) {
+    header {
+        padding: 0 40px;
+    }
+
+    header.logo {
+        padding-left: -20px;
+    }
+
+    .request-btn {
+        padding: 5px 4px;
+    }
+
+    .navbar ul {
+        gap: 5px;
+        padding-top: 9px;
+    }
+}
+
+@media(max-width: 500px) {
+
+    .cont-img1 {
+        width: 100%;
+
+    }
+
+    .first-img {
+        width: 800px;
+        margin-left: -190px;
+        margin-top: 40px;
+        height: 400px;
+
+
+    }
+
+    .second-img {
+        width: 350px;
+        margin-top: 70px;
+        margin-right: 140px;
+    }
+
+    .head {
+        margin-top: 270px;
+
+    }
+
+    .head1 h1 {
+        margin-left: -18px;
+        font-family: "Raleway", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 600;
+        font-style: normal;
+        width: 300px;
+    }
+
+    .head1 p {
+        margin-left: -40px;
+        width: 380px;
+        flex-wrap: wrap;
+    }
+
+    .request-btn2 {
+        margin-left: 20px;
+    }
+
+    .navbar ul li.contact a:hover::after {
+        width: 50%;
+        display: none;
+    }
+
+    .navbar ul,
+    .request-btn {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .navbar .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 89%;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: white;
+        padding: 50px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        margin-top: 35px;
+        margin-right: 20px;
+        border-radius: 5px;
+        z-index: 4;
+        color: black;
+
+    }
+
+    .navbar.nav-links.active {
+        display: flex;
+    }
+
+    .navbar ul li {
+        /* margin: 15px; */
+        padding: 10px;
+
+    }
+
+    .close-icon {
+        display: none;
+        font-size: 30px;
+        position: absolute;
+        top: 20px;
+        right: 40px;
+        cursor: pointer;
+    }
+
+
+    .navbar,
+    .nav-links.active,
+    .close-icon {
+        display: block;
+
+    }
+
+    .features {
+        margin-top: 80px;
+        height: 1300px;
+    }
+
+    .feauture-cards {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feauture-card {
+        text-align: center;
+        margin-top: 37px;
+        width: 100%;
+    }
+
+    .feat-head {
+        width: 100%;
+    }
+
+    .feat-head h1 {
+        width: 290px;
+    }
+
+    .feat-head p {
+        width: 300px;
+        margin-left: -45px;
+    }
+
+    .articles {
+        width: 100%;
+
+
+    }
+
+    .articles .article-cards {
+        display: flex;
+        flex-direction: column;
+        width: 22%;
+        align-items: center;
+        margin-left: 120px;
+    }
+
+    .articles .article-card {
+        width: 300px;
+        margin-top: 25px;
+        background-color: white;
+    }
+
+    .name-head-text {
+        width: 300px;
+        color: black;
+    }
+
+    .names {
+        color: black;
+    }
+
+    .name-header {
+        color: black;
+    }
+
+    .footer {
+        position: relative;
+        margin-top: 1500px;
+    }
+
+    .container1 {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .social-icons {
+        margin-left: -10px;
+        font-size: 26px;
+    }
+
+    .footer-links {
+        margin-left: 27px;
+        margin-top: -8px;
+    }
+
+    .footer-links2 {
+        margin-left: 410px;
+        text-align: center;
+        margin-top: -17px;
+    }
+
+    .social-icons .fa-facebook {
+        color: white;
+        margin: 5px;
+    }
+
+    .social-icons .fa-twitter {
+        color: white;
+        margin: 5px;
+    }
+
+    .social-icons .fa-instagram {
+        color: white;
+        margin: 5px;
+    }
+
+    .social-icons .fa-youtube {
+        color: white;
+        margin: 5px;
+    }
+
+    .social-icons .fa-pinterest {
+        color: white;
+        margin: 5px;
+    }
+
+    .footer-logo {
+        margin-right: 90px;
+    }
+
+    .footer-links .blog {
+        text-align: center;
+
+    }
+
+}
